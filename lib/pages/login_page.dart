@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components/my_button.dart';
 import 'package:flutter_application_1/components/my_textfield.dart';
 
 class LoginPagess extends StatelessWidget {
@@ -15,11 +16,11 @@ class LoginPagess extends StatelessWidget {
           child: Column(
             children: [
               //login
-              Icon(
+              const Icon(
                 Icons.flutter_dash,
                 size: 100,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
 
@@ -31,7 +32,7 @@ class LoginPagess extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               // username textfild
@@ -40,7 +41,7 @@ class LoginPagess extends StatelessWidget {
                 hintText: 'usename',
                 obscredText: false,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               // password textfild
@@ -50,8 +51,30 @@ class LoginPagess extends StatelessWidget {
                 obscredText: true,
               ),
               // forget password?
+              const SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 25.0,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      'fonget passwd?',
+                      style: TextStyle(
+                        color: Colors.grey[600],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
               // sign in button
-
+              MyBtn(),
               // or contune with
 
               // google + apple sing in button
