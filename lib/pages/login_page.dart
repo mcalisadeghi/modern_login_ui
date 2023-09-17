@@ -78,14 +78,14 @@ class LoginPagess extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
               // sign in button
               MyBtn(
                 onTab: signUserIn(),
               ),
               const SizedBox(
-                height: 50,
+                height: 60,
               ),
               // or contune with
               Padding(
@@ -132,7 +132,7 @@ class LoginPagess extends StatelessWidget {
                     imagePath: 'assets/images/google.png',
                   ),
                   SizedBox(
-                    width: 10,
+                    width: 25,
                   ),
                   // apple button
                   SquareTile(
@@ -140,7 +140,31 @@ class LoginPagess extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(
+                width: 25,
+              ),
               // not a membe? resister no
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Not a member?',
+                    style: TextStyle(
+                      color: Colors.grey[700],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 4,
+                  ),
+                  const Text(
+                    'Register now',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
