@@ -3,10 +3,12 @@ import 'package:flutter_application_1/components/my_button.dart';
 import 'package:flutter_application_1/components/my_textfield.dart';
 
 class LoginPagess extends StatelessWidget {
+  //text editing controller
   final usenameController = TextEditingController();
   final paswdController = TextEditingController();
   LoginPagess({super.key});
-
+// sign user in method
+  signUserIn() {}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,9 +76,45 @@ class LoginPagess extends StatelessWidget {
                 height: 10,
               ),
               // sign in button
-              MyBtn(),
+              MyBtn(
+                onTab: signUserIn(),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
               // or contune with
-
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 25.0,
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Divider(
+                        thickness: 0.5,
+                        color: Colors.grey[400],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 10.0,
+                      ),
+                      child: Text(
+                        'Or continue with',
+                        style: TextStyle(
+                          color: Colors.grey[700],
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Divider(
+                        thickness: 0.5,
+                        color: Colors.grey[400],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               // google + apple sing in button
 
               // not a membe? resister no
