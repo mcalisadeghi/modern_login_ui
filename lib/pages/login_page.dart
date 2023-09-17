@@ -1,10 +1,68 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components/my_textfield.dart';
 
 class LoginPagess extends StatelessWidget {
-  const LoginPagess({super.key});
+  final usenameController = TextEditingController();
+  final paswdController = TextEditingController();
+  LoginPagess({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Colors.grey[300],
+      body: SafeArea(
+        child: Container(
+          child: Column(
+            children: [
+              //login
+              Icon(
+                Icons.flutter_dash,
+                size: 100,
+              ),
+              SizedBox(
+                height: 50,
+              ),
+
+              // welcome textfield
+              Text(
+                'We;cp,e bacl upi\'ve been missed',
+                style: TextStyle(
+                  color: Colors.grey[700],
+                  fontSize: 16,
+                ),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              // username textfild
+              MyTextFeild(
+                controller: usenameController,
+                hintText: 'usename',
+                obscredText: false,
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              // password textfild
+              MyTextFeild(
+                controller: paswdController,
+                hintText: 'password',
+                obscredText: true,
+              ),
+              // forget password?
+              // sign in button
+
+              // or contune with
+
+              // google + apple sing in button
+
+              // not a membe? resister no
+            ],
+          ),
+        ),
+      ),
+
+      // w
+    );
   }
 }
