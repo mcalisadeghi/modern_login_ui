@@ -13,6 +13,9 @@ class MyBtn extends StatelessWidget {
       onTap: onTab,
       child: Container(
         padding: const EdgeInsets.all(
+          23.0,
+        ),
+        margin: const EdgeInsets.all(
           25.0,
         ),
         decoration: BoxDecoration(
@@ -23,7 +26,7 @@ class MyBtn extends StatelessWidget {
         ),
         child: const Center(
           child: Text(
-            'Sinn In',
+            'Sign In',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,

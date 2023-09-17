@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/components/my_button.dart';
 import 'package:flutter_application_1/components/my_textfield.dart';
+import 'package:flutter_application_1/components/square_tile.dart';
 
 class LoginPagess extends StatelessWidget {
   //text editing controller
@@ -14,9 +15,13 @@ class LoginPagess extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[300],
       body: SafeArea(
-        child: Container(
+        child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(
+                height: 50,
+              ),
               //login
               const Icon(
                 Icons.flutter_dash,
@@ -28,7 +33,7 @@ class LoginPagess extends StatelessWidget {
 
               // welcome textfield
               Text(
-                'We;cp,e bacl upi\'ve been missed',
+                'Welcom back you\'ve been missed',
                 style: TextStyle(
                   color: Colors.grey[700],
                   fontSize: 16,
@@ -73,7 +78,7 @@ class LoginPagess extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
               // sign in button
               MyBtn(
@@ -96,7 +101,7 @@ class LoginPagess extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         horizontal: 10.0,
                       ),
                       child: Text(
@@ -116,7 +121,25 @@ class LoginPagess extends StatelessWidget {
                 ),
               ),
               // google + apple sing in button
-
+              const SizedBox(
+                width: 10,
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // google button
+                  SquareTile(
+                    imagePath: 'assets/images/google.png',
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  // apple button
+                  SquareTile(
+                    imagePath: 'assets/images/apple.png',
+                  ),
+                ],
+              ),
               // not a membe? resister no
             ],
           ),
